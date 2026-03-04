@@ -1,0 +1,39 @@
+{
+  "monitor_name": "left",
+  "monitor_text_scale": 0.5,
+  "refresh_seconds": 0.2,
+
+  "time": {
+    "url": "https://aisenseapi.com/services/v1/timestamp",
+    "sync_every_seconds": 30,
+    "timeout_seconds": 3,
+    "modulo_seconds": 1000000
+  },
+
+  "time_mismatch": {
+    "small_drift_sec": 10,
+    "big_drift_sec": 120,
+    "on_big_drift": "pause"
+  },
+
+  "redstone_relays": [
+    { "alias": "A", "name": "redstone_relay_9" },
+    { "alias": "B", "name": "redstone_relay_12" },
+    { "alias": "C", "name": "redstone_relay_11" }
+  ],
+
+  "redstone_links": [
+    { "alias": "piston_coupled",  "host_relay": "A", "relay_side": "back" },
+    { "alias": "drill_move",      "host_relay": "A", "relay_side": "top" },
+    { "alias": "piston_push",     "host_relay": "A", "relay_side": "front" },
+
+    { "alias": "drill_check_rx",  "host_relay": "B", "relay_side": "bottom" },
+    { "alias": "drill_coupled",   "host_relay": "B", "relay_side": "back" },
+    { "alias": "drill_reverse",   "host_relay": "B", "relay_side": "top" },
+    { "alias": "piston_retract_backup", "host_relay": "B", "relay_side": "front" },
+
+    { "alias": "burn_trash",      "host_relay": "C", "relay_side": "left" },
+    { "alias": "buff_chest_full", "host_relay": "C", "relay_side": "bottom" },
+    { "alias": "drill_check_tx",  "host_relay": "C", "relay_side": "top" }
+  ]
+}
