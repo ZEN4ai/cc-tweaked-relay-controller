@@ -1,7 +1,7 @@
 -- installer.lua (ascii only)
 -- Downloads relay controller project from GitHub into /relayctl and creates startup.lua.
 
-local REPO_RAW_BASE = "https://raw.githubusercontent.com/<YOUR_USER>/<YOUR_REPO>/main"
+local REPO_RAW_BASE = "https://raw.githubusercontent.com/ZEN4ai/cc-tweaked-relay-controller/main"
 
 local FILES = {
   { "relayctl/util.lua",    "relayctl/util.lua"    },
