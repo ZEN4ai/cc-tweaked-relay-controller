@@ -178,7 +178,7 @@ mode "Full Auto Quarry" sequence infinite
 
   action wait_item_moved "Moving items..."
     # no init needed
-    goto action_main_move after 2 if wait_item_moved == false
+    goto action_main_move after 2 if drill_itemvault_isfree == false
   end
   
   #=======================================================================
