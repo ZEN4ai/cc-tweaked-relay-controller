@@ -1,6 +1,6 @@
 -- time.lua (ascii only)
 
-local util = require("relayctl.util")
+local util = require("util")
 
 local M = {}
 

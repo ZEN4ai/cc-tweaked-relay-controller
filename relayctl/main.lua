@@ -1,16 +1,16 @@
 -- main.lua (ascii only)
 
-local util = require("relayctl.util")
-local tim  = require("relayctl.time")
-local mon  = require("relayctl.monitor")
-local hwio = require("relayctl.hw")
-local dsl  = require("relayctl.dsl")
-local eng  = require("relayctl.engine")
-local ui   = require("relayctl.ui")
+local util = require("util")
+local tim  = require("time")
+local mon  = require("monitor")
+local hwio = require("hw")
+local dsl  = require("dsl")
+local eng  = require("engine")
+local ui   = require("ui")
 
-local PATH_HW    = "cfg_hardware.json"
-local PATH_MODES = "cfg_modes.dsl"
-local PATH_STATE = "tmp_state.json"
+local PATH_HW    = "./cfg_hardware.json"
+local PATH_MODES = "./cfg_modes.dsl"
+local PATH_STATE = "./tmp_state.json"
 
 local hw = util.loadJsonOrDefault(PATH_HW, {})
 

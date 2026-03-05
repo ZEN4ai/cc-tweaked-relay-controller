@@ -1,7 +1,7 @@
 -- dsl.lua (ascii only)
 -- Provides: loadModesDslOrStop(path)
 
-local util = require("relayctl.util")
+local util = require("util")
 
 local M = {}
 

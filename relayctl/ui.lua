@@ -1,9 +1,9 @@
 -- ui.lua (ascii only)
 -- UI layout + word wrap + deterministic buttons.
 
-local util = require("relayctl.util")
-local mon  = require("relayctl.monitor")
-local tim  = require("relayctl.time")
+local util = require("util")
+local mon  = require("monitor")
+local tim  = require("time")
 
 local M = {}
 

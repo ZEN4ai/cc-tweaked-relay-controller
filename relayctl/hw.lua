@@ -1,7 +1,7 @@
 -- hw.lua (ascii only)
 -- Redstone relays + link mapping + read/write helpers.
 
-local util = require("relayctl.util")
+local util = require("util")
 
 local M = {}
 

@@ -1,7 +1,7 @@
 -- monitor.lua (ascii only)
 -- Strict cfg-only wrap + alias mapping for double-connected monitors.
 
-local util = require("relayctl.util")
+local util = require("util")
 
 local M = {}
 

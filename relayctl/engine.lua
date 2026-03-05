@@ -1,8 +1,8 @@
 -- engine.lua (ascii only)
 
-local util = require("relayctl.util")
-local hwio = require("relayctl.hw")
-local tim  = require("relayctl.time")
+local util = require("util")
+local hwio = require("hw")
+local tim  = require("time")
 
 local M = {}
 
