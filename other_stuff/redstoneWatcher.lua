@@ -1,4 +1,6 @@
 -- config
+-- wget https://raw.githubusercontent.com/ZEN4ai/cc-tweaked-relay-controller/other_stuff/other_stuff/redstoneWatcher.lua
+
 local container = "right"     -- container side or peripheral name
 local redstoneSide = "top" -- redstone output side
 
