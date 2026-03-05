@@ -9,6 +9,8 @@
 -- Only ONE print at end of pass or when sleep reason changes.
 -- Peripherals may disappear; script must not crash.
 
+-- wget https://raw.githubusercontent.com/ZEN4ai/cc-tweaked-relay-controller/other_stuff/other_stuff/fastItemMove.lua
+
 ----------------------------
 -- Config
 ----------------------------
