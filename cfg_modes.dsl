@@ -16,7 +16,7 @@ mode "Re-Init" sequence infinite
     init piston_retract_backup = false
     init piston_push = false
     init drill_check_tx = false
-    #init burn_trash = true
+    
 
     # Stay here forever (until operator switches mode)
     goto end_restart after 1 if time_passed >= 0
@@ -24,8 +24,8 @@ mode "Re-Init" sequence infinite
 endmode
 
 mode "Empty Buffer Vault" sequence infinite
-  action init_empty "Burning trash" #Start Burning
-    #init burn_trash = true 
+  action wip_dont_use "Burning trash" #Start Burning
+  
 
     goto empty_done after 1 if buff_chest_full == false
   end
@@ -156,7 +156,7 @@ mode "Full Auto Quarry" sequence infinite
     init drill_coupled  = false
 
     #goto to move forward sequence
-    goto action_main_move after 5 if drill_coupled == true
+    goto wait_item_moved after 1 if drill_coupled == true
 
     #go again try to retract drill
     goto action_drill_homing after 1 if drill_coupled == false
@@ -172,6 +172,13 @@ mode "Full Auto Quarry" sequence infinite
 
     #goto drill-init in case we catch error on drill init
     goto action_init_drill_move after 10 if piston_coupled == true and drill_coupled == true
+  end
+  #=======================================================================
+  # Check if items moving_done
+
+  action wait_item_moved "Moving items..."
+    # no init needed
+    goto action_main_move after 2 if wait_item_moved == false
   end
   
   #=======================================================================
